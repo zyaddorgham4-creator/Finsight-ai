@@ -1,0 +1,144 @@
+.ai-history {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ai-history-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ai-history-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: #9ca7ad;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.ai-history-header h2 {
+  margin: 0;
+  color: #1f2e38;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.ai-history-cta {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #2f7d68;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.ai-history-cta:hover {
+  background: #eef5f1;
+}
+
+.ai-history-cta:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+.ai-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.ai-history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e5ece9;
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.ai-history-item:hover {
+  border-color: #d5e2dc;
+  box-shadow: 0 6px 18px rgba(33, 48, 61, 0.05);
+  transform: translateY(-1px);
+}
+
+.ai-history-mark {
+  display: grid;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 9px;
+  background: #eef5f1;
+  color: #2f7d68;
+}
+
+.ai-history-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.ai-history-title {
+  color: #2b3b44;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ai-history-time {
+  color: #a0aaae;
+  font-size: 11px;
+}
+
+.ai-history-arrow {
+  display: grid;
+  place-items: center;
+  color: #a8b6b1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .ai-history-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .ai-history-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ai-history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-history-item {
+    transition: none;
+  }
+}

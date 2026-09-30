@@ -1,0 +1,50 @@
+.goal-delete-modal {
+  width: min(100%, 420px);
+  padding: 26px;
+  border: 1px solid #e5ece9;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(33, 48, 61, 0.16);
+}
+
+.goal-delete-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: #fff1f0;
+  color: #c85d58;
+}
+
+.goal-delete-content h2 {
+  margin: 0;
+  color: #1f2e38;
+  font-size: 19px;
+  font-weight: 720;
+}
+
+.goal-delete-content p {
+  margin: 8px 0 0;
+  color: #7d8a90;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.goal-delete-content strong {
+  color: #45565f;
+}
+
+.goal-delete-modal .goal-modal-actions {
+  margin-top: 24px;
+}
+
+.goal-modal-btn--danger {
+  background: #c85d58;
+  color: #ffffff;
+}
+
+.goal-modal-btn--danger:hover {
+  background: #b84f4a;
+}

@@ -1,0 +1,78 @@
+.budget-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.budget-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #e5ece9;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(33, 48, 61, 0.03);
+}
+
+.budget-summary-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.budget-summary-icon--green {
+  background: #eef5f1;
+  color: #2f7d68;
+}
+
+.budget-summary-icon--blue {
+  background: #edf3fb;
+  color: #4f7fbf;
+}
+
+.budget-summary-icon--purple {
+  background: #f2eef9;
+  color: #7c5cbf;
+}
+
+.budget-summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.budget-summary-content span {
+  color: #89969c;
+  font-size: 11.5px;
+  font-weight: 550;
+}
+
+.budget-summary-content strong {
+  color: #1f2e38;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+@media (max-width: 1000px) {
+  .budget-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .budget-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-summary-card {
+    padding: 15px;
+  }
+}

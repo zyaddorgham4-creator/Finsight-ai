@@ -1,0 +1,265 @@
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #e5ece9;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(33, 48, 61, 0.03);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-2px);
+  border-color: #dce7e3;
+  box-shadow: 0 8px 22px rgba(33, 48, 61, 0.06);
+}
+
+.goal-card:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 3px;
+}
+
+.goal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.goal-card-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 11px;
+  background: #eef5f1;
+  color: #2f7d68;
+}
+
+.goal-card-title-block {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  gap: 3px;
+}
+
+.goal-card-title-block h3 {
+  margin: 0;
+  color: #263740;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.goal-card-category {
+  color: #96a1a5;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.goal-card-status {
+  flex-shrink: 0;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: #f3f6f5;
+  color: #7a898e;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.goal-card--completed .goal-card-status {
+  background: #e7f2eb;
+  color: #408463;
+}
+
+.goal-card--on-track .goal-card-status {
+  background: #eef5f1;
+  color: #2f7d68;
+}
+
+.goal-card--needs-attention .goal-card-status {
+  background: #fff4e9;
+  color: #b26c2c;
+}
+
+.goal-card--overdue .goal-card-status {
+  background: #fff0ef;
+  color: #b65d57;
+}
+
+.goal-card-amounts {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.goal-card-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.goal-card-amount strong {
+  color: #263740;
+  font-size: 20px;
+  font-weight: 760;
+  letter-spacing: -0.03em;
+}
+
+.goal-card-amount span {
+  color: #9aa5aa;
+  font-size: 11px;
+}
+
+.goal-card-percent {
+  color: #2f7d68;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.goal-card-progress {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #edf2f0;
+}
+
+.goal-card-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #4b9c82;
+  transition: width 0.35s ease;
+}
+
+.goal-card--completed .goal-card-progress-fill {
+  background: #408463;
+}
+
+.goal-card--needs-attention .goal-card-progress-fill {
+  background: #d08a4b;
+}
+
+.goal-card--overdue .goal-card-progress-fill {
+  background: #c96b64;
+}
+
+.goal-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.goal-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.goal-card-meta-label {
+  color: #9aa5aa;
+  font-size: 10.5px;
+}
+
+.goal-card-meta-value {
+  color: #52636a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.goal-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.goal-card-deadline {
+  color: #89969c;
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+.goal-card-action-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.goal-card-action {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #e5ece9;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #829097;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.goal-card-action:hover {
+  border-color: #d5e3dd;
+  background: #eef5f1;
+  color: #2f7d68;
+}
+
+.goal-card-action--add {
+  border-color: #d8e9e1;
+  background: #eef7f3;
+  color: #2f7d68;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.goal-card-action--add:hover {
+  border-color: #bcd9ce;
+  background: #e2f1eb;
+  color: #286d5b;
+}
+
+.goal-card-action--danger:hover {
+  border-color: #f0d7d5;
+  background: #fff1f0;
+  color: #c85d58;
+}
+
+.goal-card-action:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .goal-card {
+    padding: 16px;
+  }
+
+  .goal-card-footer {
+    align-items: flex-start;
+  }
+
+  .goal-card-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+  }
+}

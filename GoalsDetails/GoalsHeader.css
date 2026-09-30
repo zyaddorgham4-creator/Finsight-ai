@@ -1,0 +1,78 @@
+.goals-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.goals-header-text {
+  min-width: 0;
+}
+
+.goals-header-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #9ca7ad;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.goals-header-text h1 {
+  margin: 0;
+  color: #1f2e38;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 720;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.goals-header-text p {
+  margin: 10px 0 0;
+  color: #89969c;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 460px;
+}
+
+.goals-header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid #234d44;
+  border-radius: 11px;
+  background: #234d44;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 7px 16px rgba(35, 77, 68, 0.14);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goals-header-btn:hover {
+  background: #2d6256;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(35, 77, 68, 0.22);
+}
+
+.goals-header-btn:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .goals-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .goals-header-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}

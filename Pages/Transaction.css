@@ -1,0 +1,27 @@
+.fs-transactions-page {
+  min-height: 100vh;
+  padding: 34px 24px 56px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(218, 235, 227, 0.42), transparent 25rem),
+    #f7f9f8;
+  color: #25313d;
+  margin-top: 60px;
+}
+
+.fs-transactions-container {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .fs-transactions-page {
+    padding: 24px 14px 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .fs-transactions-page {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

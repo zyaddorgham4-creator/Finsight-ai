@@ -1,0 +1,381 @@
+.fs-delete-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(20, 33, 38, 0.5);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  animation: fs-delete-fade 180ms ease;
+}
+
+@keyframes fs-delete-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fs-delete-modal {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e5ece9;
+  box-shadow: 0 30px 60px rgba(20, 33, 38, 0.2);
+  padding: 28px 26px 22px;
+  text-align: center;
+  animation: fs-delete-in 220ms ease;
+}
+
+@keyframes fs-delete-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fs-delete-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #93a09f;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.fs-delete-close:hover {
+  background: #f7fbf8;
+  border-color: #e5ece9;
+  color: #2f7d68;
+}
+
+.fs-delete-close:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+.fs-delete-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.fs-delete-icon-inner {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border-radius: 16px;
+  background: #fdecea;
+  color: #c25444;
+  border: 1px solid #f7d6d0;
+  box-shadow: 0 6px 18px rgba(194, 84, 68, 0.12);
+}
+
+.fs-delete-content {
+  margin-bottom: 18px;
+}
+
+.fs-delete-title {
+  margin: 0 0 8px;
+  color: #1f2e38;
+  font-size: 20px;
+  font-weight: 720;
+  letter-spacing: -0.02em;
+}
+
+.fs-delete-description {
+  margin: 0 auto;
+  max-width: 340px;
+  color: #7c8b90;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.fs-delete-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #eff3f1;
+  border-radius: 14px;
+  background: #fbfcfc;
+  text-align: left;
+}
+
+.fs-delete-preview-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.fs-delete-preview-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.fs-delete-preview-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.fs-delete-preview-icon--expense {
+  background: #f7e9e2;
+  color: #bb7059;
+}
+
+.fs-delete-preview-icon--income {
+  background: #e4f1e9;
+  color: #4d8d6f;
+}
+
+.fs-delete-preview-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.fs-delete-preview-copy strong {
+  overflow: hidden;
+  color: #2b3b44;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fs-delete-preview-copy small {
+  overflow: hidden;
+  color: #93a09f;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fs-delete-preview-amount {
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.fs-delete-preview-amount--expense {
+  color: #b56753;
+}
+
+.fs-delete-preview-amount--income {
+  color: #408463;
+}
+
+.fs-delete-preview-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #eff3f1;
+}
+
+.fs-delete-preview-tag {
+  display: inline-flex;
+  padding: 4px 9px;
+  border-radius: 7px;
+  background: #f1f5f3;
+  color: #71827d;
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fs-delete-preview-muted {
+  color: #7d8b90;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fs-delete-preview-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #cdd6d3;
+}
+
+.fs-delete-preview-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.fs-delete-preview-type i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.fs-delete-preview-type--expense {
+  color: #b86d58;
+}
+
+.fs-delete-preview-type--expense i {
+  background: #d8836b;
+}
+
+.fs-delete-preview-type--income {
+  color: #4e8a6e;
+}
+
+.fs-delete-preview-type--income i {
+  background: #65a881;
+}
+
+.fs-delete-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.fs-delete-btn-cancel {
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid #dfe8e5;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #61736f;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.fs-delete-btn-cancel:hover {
+  background: #f7fbf8;
+  border-color: #bcd1c8;
+  color: #315f53;
+}
+
+.fs-delete-btn-cancel:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+.fs-delete-btn-confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 18px;
+  border: 1px solid #c25444;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #c25444, #d9695a);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 5px 14px rgba(194, 84, 68, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.fs-delete-btn-confirm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(194, 84, 68, 0.28);
+  background: linear-gradient(135deg, #b64a3b, #cf5e4e);
+}
+
+.fs-delete-btn-confirm:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(194, 84, 68, 0.22);
+}
+
+.fs-delete-btn-confirm:focus-visible {
+  outline: 2px solid #c25444;
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .fs-delete-overlay {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .fs-delete-modal {
+    max-width: 100%;
+    border-radius: 16px;
+    padding: 22px 18px 18px;
+    margin: 12px 0;
+  }
+
+  .fs-delete-icon-inner {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+
+  .fs-delete-title {
+    font-size: 17px;
+  }
+
+  .fs-delete-description {
+    font-size: 12.5px;
+  }
+
+  .fs-delete-preview {
+    padding: 12px 13px;
+  }
+
+  .fs-delete-preview-copy strong {
+    font-size: 13.5px;
+  }
+
+  .fs-delete-preview-amount {
+    font-size: 14px;
+  }
+
+  .fs-delete-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .fs-delete-btn-cancel,
+  .fs-delete-btn-confirm {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fs-delete-overlay,
+  .fs-delete-modal,
+  .fs-delete-close,
+  .fs-delete-btn-cancel,
+  .fs-delete-btn-confirm {
+    animation: none;
+    transition: none;
+  }
+}

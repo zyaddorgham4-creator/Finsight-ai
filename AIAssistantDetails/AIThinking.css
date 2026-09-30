@@ -1,0 +1,86 @@
+.ai-thinking {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  border: 1px solid #e2ebe7;
+  border-radius: 16px;
+  background: #ffffff;
+  animation: ai-thinking-in 220ms ease;
+}
+
+@keyframes ai-thinking-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-thinking-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ai-thinking-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4b9c82;
+  animation: ai-thinking-bounce 1.2s ease-in-out infinite;
+}
+
+.ai-thinking-dot:nth-child(2) { animation-delay: 0.15s; }
+.ai-thinking-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes ai-thinking-bounce {
+  0%, 60%, 100% { opacity: 0.35; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+.ai-thinking-text {
+  color: #2f7d68;
+  font-size: 13.5px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.ai-thinking-bar {
+  flex: 1;
+  height: 3px;
+  border-radius: 10px;
+  background: #eef2f0;
+  overflow: hidden;
+  max-width: 260px;
+  margin-left: auto;
+}
+
+.ai-thinking-bar-fill {
+  display: block;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, transparent, #4b9c82, transparent);
+  animation: ai-thinking-slide 1.4s ease-in-out infinite;
+}
+
+@keyframes ai-thinking-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(320%); }
+}
+
+@media (max-width: 560px) {
+  .ai-thinking {
+    padding: 16px 18px;
+    gap: 10px;
+  }
+
+  .ai-thinking-bar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-thinking-dot,
+  .ai-thinking-bar-fill {
+    animation: none;
+  }
+}

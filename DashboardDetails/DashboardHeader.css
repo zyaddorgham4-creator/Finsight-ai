@@ -1,0 +1,169 @@
+.fs-dashboard-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 12px 0 34px;
+}
+
+.fs-header-copy {
+  min-width: 0;
+}
+
+.fs-header-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #89929f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.fs-header-copy h1 {
+  margin: 0;
+  color: #17202b;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 680;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.fs-header-copy h1 span {
+  color: #d99b4a;
+  font-size: 24px;
+  vertical-align: 6px;
+}
+
+.fs-header-copy p {
+  margin: 12px 0 0;
+  color: #84909d;
+  font-size: 14px;
+}
+
+.fs-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fs-current-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #788492;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fs-add-transaction,
+.fs-notification-button {
+  border: 1px solid #e2e7eb;
+  background: #ffffff;
+  color: #263340;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.fs-add-transaction {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border-color: #1e2b37;
+  border-radius: 12px;
+  background: #1e2b37;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.fs-add-transaction:hover {
+  box-shadow: 0 8px 20px rgba(31, 45, 58, 0.18);
+  transform: translateY(-2px);
+}
+
+.fs-notification-button {
+  position: relative;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.fs-notification-button:hover {
+  border-color: #bac4cc;
+  transform: translateY(-2px);
+}
+
+.fs-notification-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #d67662;
+}
+
+.fs-user-avatar {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: #d6e2dc;
+  box-shadow: 0 0 0 1px #dce4e2;
+  color: #355247;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+@media (max-width: 760px) {
+  .fs-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    padding-bottom: 26px;
+  }
+
+  .fs-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .fs-current-date {
+    width: 100%;
+  }
+
+  .fs-add-transaction {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .fs-header-actions {
+    gap: 8px;
+  }
+
+  .fs-current-date {
+    font-size: 11px;
+  }
+
+  .fs-add-transaction {
+    min-height: 40px;
+    padding: 0 12px;
+  }
+
+  .fs-notification-button,
+  .fs-user-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}

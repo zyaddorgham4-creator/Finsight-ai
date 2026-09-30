@@ -1,0 +1,240 @@
+.ai-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 40px 36px;
+  border: 1px solid #e5ece9;
+  border-radius: 24px;
+  background: linear-gradient(160deg, #f7fbf9 0%, #ffffff 55%);
+  box-shadow: 0 10px 40px rgba(33, 48, 61, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-hero::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(75, 156, 130, 0.09), transparent 70%);
+  pointer-events: none;
+}
+
+.ai-hero-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.ai-hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-hero-brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2f7d68, #4b9c82);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 12px rgba(47, 125, 104, 0.2);
+}
+
+.ai-hero-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ai-hero-brand-text strong {
+  color: #1f2e38;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.ai-hero-brand-text small {
+  color: #89969c;
+  font-size: 11px;
+}
+
+.ai-hero-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border: 1px solid #d5e2dc;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #2f7d68;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ai-hero-online-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4b9c82;
+  box-shadow: 0 0 0 3px rgba(75, 156, 130, 0.2);
+  animation: ai-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes ai-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.ai-hero-title {
+  position: relative;
+  z-index: 1;
+  margin: 8px 0 0;
+  color: #1f2e38;
+  font-size: clamp(28px, 4.2vw, 44px);
+  font-weight: 780;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.ai-hero-title-sub {
+  color: #89969c;
+  font-weight: 620;
+}
+
+.ai-hero-question {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #5b6b73;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ai-hero-input {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 18px;
+  border: 1px solid #dfe8e5;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(33, 48, 61, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ai-hero-input:focus-within {
+  border-color: #7fbfa7;
+  box-shadow: 0 0 0 4px rgba(79, 156, 130, 0.12);
+}
+
+.ai-hero-input-icon {
+  display: grid;
+  place-items: center;
+  color: #4b9c82;
+  flex-shrink: 0;
+}
+
+.ai-hero-input input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #1f2e38;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ai-hero-input input::placeholder {
+  color: #a8b1b3;
+  font-weight: 400;
+}
+
+.ai-hero-submit {
+  display: grid;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2f7d68, #4b9c82);
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 6px 16px rgba(47, 125, 104, 0.22);
+}
+
+.ai-hero-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(47, 125, 104, 0.3);
+}
+
+.ai-hero-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-hero-submit:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+.ai-hero-hint {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #a0aaae;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .ai-hero {
+    padding: 24px 20px 22px;
+    border-radius: 20px;
+    gap: 16px;
+  }
+
+  .ai-hero-status {
+    flex-wrap: wrap;
+  }
+
+  .ai-hero-input {
+    padding: 6px 6px 6px 14px;
+    border-radius: 14px;
+  }
+
+  .ai-hero-submit {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .ai-hero-hint {
+    font-size: 11.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-hero-online-dot {
+    animation: none;
+  }
+}

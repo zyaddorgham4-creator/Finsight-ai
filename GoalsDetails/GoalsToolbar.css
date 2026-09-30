@@ -1,0 +1,121 @@
+.goals-section-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.goals-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 220px;
+  flex: 1;
+  padding: 0 12px;
+  height: 38px;
+  border: 1px solid #e5ece9;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #8c999e;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.goals-search:focus-within {
+  border-color: #65a88f;
+  box-shadow: 0 0 0 3px rgba(75, 156, 130, 0.08);
+}
+
+.goals-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #2b3b44;
+  font-size: 12px;
+}
+
+.goals-search input::placeholder {
+  color: #a2adaf;
+}
+
+.goals-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.goals-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goals-filter-group select {
+  height: 38px;
+  padding: 0 30px 0 11px;
+  border: 1px solid #e5ece9;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #56666d;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.goals-filter-group select:focus {
+  border-color: #65a88f;
+  box-shadow: 0 0 0 3px rgba(75, 156, 130, 0.08);
+}
+
+.goals-section-toolbar .goals-section-view {
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .goals-search {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .goals-section-toolbar {
+    align-items: stretch;
+  }
+
+  .goals-search {
+    min-width: 100%;
+  }
+
+  .goals-filter-group {
+    flex: 1;
+  }
+
+  .goals-filter-group select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .goals-section-toolbar .goals-section-view {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .goals-filter-group {
+    width: 100%;
+  }
+
+  .goals-section-toolbar .goals-section-view {
+    width: 100%;
+  }
+
+  .goals-section-toolbar
+    .goals-section-view-btn {
+    flex: 1;
+  }
+}

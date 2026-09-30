@@ -1,0 +1,238 @@
+.ai-response {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px 28px 24px;
+  border: 1px solid #e2ebe7;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(47, 125, 104, 0.06);
+  animation: ai-response-in 320ms ease;
+}
+
+@keyframes ai-response-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-response-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f4f2;
+}
+
+.ai-response-title-block {
+  min-width: 0;
+}
+
+.ai-response-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: #9ca7ad;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.ai-response-header h2 {
+  margin: 0 0 6px;
+  color: #1f2e38;
+  font-size: 22px;
+  font-weight: 780;
+  letter-spacing: -0.03em;
+}
+
+.ai-response-prompt {
+  display: block;
+  color: #89969c;
+  font-size: 12.5px;
+  font-style: italic;
+}
+
+.ai-response-confidence {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ai-response-confidence-label {
+  color: #9ca7ad;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ai-response-confidence-value {
+  color: #2f7d68;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.ai-response-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.ai-response-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 16px 14px;
+  border: 1px solid #eff3f1;
+  border-radius: 12px;
+  background: #fbfcfc;
+  transition: border-color 0.2s ease;
+}
+
+.ai-response-metric--positive {
+  background: #f5faf7;
+  border-color: #dcece3;
+}
+
+.ai-response-metric--warning {
+  background: #fdf9f2;
+  border-color: #f2e4c8;
+}
+
+.ai-response-metric-label {
+  color: #89969c;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.ai-response-metric-value {
+  color: #1f2e38;
+  font-size: 20px;
+  font-weight: 780;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.ai-response-metric--positive .ai-response-metric-value {
+  color: #2f7d68;
+}
+
+.ai-response-metric--warning .ai-response-metric-value {
+  color: #b25c30;
+}
+
+.ai-response-assessment {
+  padding: 18px 20px;
+  border-left: 3px solid #4b9c82;
+  border-radius: 4px 12px 12px 4px;
+  background: #f7fbf9;
+}
+
+.ai-response-assessment-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2f7d68;
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ai-response-assessment p {
+  margin: 0;
+  color: #2b3b44;
+  font-size: 14.5px;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.ai-response-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ai-response-action {
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid #dfe8e5;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #4a5c66;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.ai-response-action:hover {
+  background: #f7fbf9;
+  border-color: #bfd8ce;
+  color: #2f7d68;
+  transform: translateY(-1px);
+}
+
+.ai-response-action.is-primary {
+  border-color: #234d44;
+  background: #234d44;
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(35, 77, 68, 0.15);
+}
+
+.ai-response-action.is-primary:hover {
+  background: #2d6256;
+  color: #ffffff;
+}
+
+.ai-response-action:focus-visible {
+  outline: 2px solid #4b9c82;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .ai-response {
+    padding: 22px 20px 20px;
+  }
+
+  .ai-response-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .ai-response-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-response-confidence {
+    align-items: flex-start;
+  }
+
+  .ai-response-header h2 {
+    font-size: 19px;
+  }
+
+  .ai-response-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ai-response-action {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-response,
+  .ai-response-action {
+    animation: none;
+    transition: none;
+  }
+}

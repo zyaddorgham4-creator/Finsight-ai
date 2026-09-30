@@ -1,0 +1,281 @@
+.fs-cashflow-card {
+  min-width: 0;
+  padding: 24px 24px 18px;
+  border: 1px solid #e6ebee;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(33, 48, 61, 0.025);
+}
+
+.fs-cashflow-header,
+.fs-cashflow-meta,
+.fs-chart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fs-cashflow-header h2 {
+  margin: 0;
+  color: #25313d;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+.fs-period-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border: 1px solid #e3e9eb;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #667580;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.fs-cashflow-meta {
+  margin-top: 25px;
+}
+
+.fs-cashflow-total {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.fs-cashflow-total strong {
+  color: #25313d;
+  font-size: 28px;
+  letter-spacing: -0.045em;
+}
+
+.fs-cashflow-total span {
+  color: #96a0a8;
+  font-size: 11px;
+}
+
+.fs-cashflow-legend {
+  display: flex;
+  gap: 16px;
+  color: #78858e;
+  font-size: 11px;
+}
+
+.fs-cashflow-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fs-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.fs-legend-dot--income {
+  background: #5ba88d;
+}
+
+.fs-legend-dot--expense {
+  background: #d98969;
+}
+
+.fs-period-options {
+  display: flex;
+  gap: 3px;
+  width: fit-content;
+  margin-top: 15px;
+  padding: 3px;
+  border-radius: 8px;
+  background: #f4f7f6;
+}
+
+.fs-period-options button {
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #9aa4a9;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.fs-period-options button.is-active {
+  background: #ffffff;
+  color: #3c665a;
+  box-shadow: 0 1px 4px rgba(33, 48, 61, 0.08);
+}
+
+.fs-chart-shell {
+  display: flex;
+  gap: 13px;
+  margin-top: 23px;
+}
+
+.fs-chart-y-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 218px;
+  padding: 2px 0 22px;
+  color: #aab2b8;
+  font-size: 10px;
+  text-align: right;
+}
+
+.fs-chart {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 240px;
+}
+
+.fs-chart-grid {
+  position: absolute;
+  inset: 0 0 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fs-chart-grid span {
+  width: 100%;
+  border-top: 1px dashed #e8edee;
+}
+
+.fs-cashflow-svg {
+  position: absolute;
+  inset: 0 0 22px;
+  width: 100%;
+  height: calc(100% - 22px);
+  overflow: visible;
+}
+
+.fs-chart-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.fs-chart-line--income {
+  stroke: #5ba88d;
+}
+
+.fs-chart-line--expense {
+  stroke: #d98969;
+  stroke-dasharray: 5 5;
+}
+
+.fs-chart-point {
+  stroke: #ffffff;
+  stroke-width: 3;
+}
+
+.fs-chart-point--income {
+  fill: #5ba88d;
+}
+
+.fs-chart-point--expense {
+  fill: #d98969;
+}
+
+.fs-chart-tooltip {
+  position: absolute;
+  top: 0;
+  left: 66%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 92px;
+  padding: 9px 10px;
+  border: 1px solid #e2ebe7;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(33, 48, 61, 0.1);
+}
+
+.fs-chart-tooltip::after {
+  position: absolute;
+  bottom: -5px;
+  left: 18px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #e2ebe7;
+  border-bottom: 1px solid #e2ebe7;
+  background: #ffffff;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.fs-chart-tooltip span {
+  color: #9ba5aa;
+  font-size: 9px;
+}
+
+.fs-chart-tooltip strong {
+  color: #33423f;
+  font-size: 13px;
+}
+
+.fs-chart-tooltip small {
+  color: #5ba88d;
+  font-size: 9px;
+}
+
+.fs-chart-x-labels {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #aab2b8;
+  font-size: 10px;
+}
+
+.fs-chart-footer {
+  margin-top: 12px;
+  color: #a0a9ae;
+  font-size: 10px;
+}
+
+.fs-chart-footer span,
+.fs-chart-footer button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fs-chart-footer button {
+  border: 0;
+  background: transparent;
+  color: #5d796f;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+@media (max-width: 560px) {
+  .fs-cashflow-card {
+    padding: 20px 16px 16px;
+  }
+
+  .fs-cashflow-total {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .fs-chart-tooltip {
+    left: 54%;
+  }
+
+  .fs-chart-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,53 @@
+.fs-dashboard-page {
+  min-height: 100vh;
+  padding: 28px 24px 48px;
+  background:
+    radial-gradient(circle at 92% 2%, rgba(218, 235, 227, 0.42), transparent 25rem),
+    #f7f9f8;
+  color: #25313d;
+  margin-top: 75px;
+}
+
+.fs-dashboard-container {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+}
+
+.fs-dashboard-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.fs-dashboard-grid--top {
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.85fr);
+  margin-bottom: 18px;
+}
+
+.fs-dashboard-grid--bottom {
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  margin-bottom: 18px;
+}
+
+.fs-dashboard-grid > section {
+  min-width: 0;
+}
+
+@media (max-width: 1050px) {
+  .fs-dashboard-grid--top,
+  .fs-dashboard-grid--bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .fs-dashboard-page {
+    padding: 18px 14px 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fs-dashboard-page {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

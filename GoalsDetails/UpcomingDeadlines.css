@@ -1,0 +1,137 @@
+.upcoming-deadlines {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 22px 18px;
+  border: 1px solid #e5ece9;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(33, 48, 61, 0.03);
+}
+
+.upcoming-deadlines-header h2 {
+  margin: 0;
+  color: #1f2e38;
+  font-size: 16px;
+  font-weight: 720;
+  letter-spacing: -0.02em;
+}
+
+.upcoming-deadlines-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-deadlines-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f2f5f3;
+}
+
+.upcoming-deadlines-item:last-child {
+  border-bottom: 0;
+}
+
+.upcoming-deadlines-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.upcoming-deadlines-name {
+  color: #2b3b44;
+  font-size: 13.5px;
+  font-weight: 650;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upcoming-deadlines-time {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.upcoming-deadlines-time--high {
+  color: #b25c30;
+}
+
+.upcoming-deadlines-time--medium {
+  color: #a06a1a;
+}
+
+.upcoming-deadlines-time--low {
+  color: #7c8b90;
+}
+
+.upcoming-deadlines-indicator {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.upcoming-deadlines-indicator--high {
+  background: #d3773f;
+  box-shadow: 0 0 0 4px rgba(211, 119, 63, 0.15);
+}
+
+.upcoming-deadlines-indicator--medium {
+  background: #d69b3b;
+  box-shadow: 0 0 0 4px rgba(214, 155, 59, 0.15);
+}
+
+.upcoming-deadlines-indicator--low {
+  background: #a8b6b1;
+  box-shadow: 0 0 0 4px rgba(168, 182, 177, 0.18);
+}
+
+.upcoming-deadlines-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.upcoming-deadlines-empty-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: #eef5f1;
+  color: #2f7d68;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.upcoming-deadlines-empty strong {
+  color: #43545d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.upcoming-deadlines-empty p {
+  max-width: 260px;
+  margin: 5px 0 0;
+  color: #9aa5aa;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  .upcoming-deadlines {
+    padding: 18px 16px 14px;
+  }
+}
